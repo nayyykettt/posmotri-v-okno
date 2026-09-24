@@ -8,7 +8,20 @@ html {
   block-size: 100%;
 }
 
+@font-face {
+  font-family: 'Fira Sans Condensed';
+  src: url('./fonts/FiraSansCondensed-Regular.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('./fonts/Oswald-Bold.woff2') format('woff2');
+  font-weight: 700;
+}
+
 .page {
+  display:flex;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -48,4 +61,96 @@ ol {
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #D9D9D9;
+}
+
+.content{
+  margin:auto;
+  max-width:1200px;
+  max-height: 800px; ;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 30px;
+  grid-template-columns: 711px 399px;
+}
+
+.search-form{
+margin-left: 0;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+
+
+
+}
+
+
+.content__list-container{
+  max-height: 534px;
+  overflow-y: auto;
+}
+
+.content__details{
+  width:auto;
+  height:auto;
+}
+
+
+.result__video-container{
+  inline-size: 100%;
+  block-size: 386px;
+  margin-bottom: 13px;
+}
+.result__video{
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+
+}
+.content__list-item{
+  display:flex;
+  margin-bottom: 30px;
+}
+
+.content__video-card{
+  display: grid;
+  flex-direction: row;
+  grid-template-columns: 1fr 1fr;
+  
+}
+
+.content__video-card-thumbnail{
+  width: 194px;
+  height:103px;
+  object-position:center;
+  object-fit: contain;
+}
+
+.content__video-card-description-container{
+  /*реализовано через гриды, так что не совсем надо?
+  В проекте на всех макетах используются одни размеры*/
+}
+
+.search-form__fieldset-title{
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0;
+  font-family: 'Fira Sans Condensed' sans-serif;
+  color: #fff;
+  margin-block-end:5px;
+
+}
+
+.title{
+  font-weight: 700;
+  font-size: 75px;
+  font-style: bold;
+  letter-spacing: 0;
+  font-style:bold ;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  line-height: 0.94;
+
+}
+
+.content__accent{
+    color: #545050;
 }
