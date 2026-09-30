@@ -20,6 +20,7 @@ html {
   font-weight: 700;
 }
 
+
 .page {
   padding-top:133px;
   padding-left: 30px;
@@ -98,6 +99,7 @@ border: none;
 
 
 .result__video-container{
+  position: relative;
   inline-size: 100%;
   block-size: 386px;
   margin-bottom: 13px;
@@ -207,12 +209,24 @@ border: none;
   border:none;
   border-bottom:1px solid #fff;
   border-top: 1px solid #fff;
+  
   width: 100%;
   padding-inline: 0;
+
 }
 
 .search-form__textfield::placeholder {
+  
   color: rgb(255 255 255 / 0.7);
+}
+.search-form__textfield:active,
+.search-form__textfield:focus-visible {
+  border-color: #fff;
+}
+
+.search-form__textfield:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .search-form__checkbox{
@@ -291,4 +305,82 @@ border: none;
 
 .custom-scrollbar{
   overflow-x: hidden;
+}
+
+.error{
+  background-color:#545050;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #545050;
+
+
+}
+
+.error__title{
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 110.00000000000001%;
+  text-transform: uppercase;
+  color:#fff;
+  margin:0;
+}
+
+
+
+.search-form__checkbox-list .search-form__label {
+  cursor: pointer;
+}
+
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox,
+.search-form__label:active .search-form__pseudo-checkbox {
+  background-color: #fff;
+  box-shadow: inset 0 0 0 1px #1b1919;
+}
+
+.search-form__label:has(.search-form__checkbox:focus-visible) {
+  outline: 1px solid #fff;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+
+.content__card-link {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+
+.content__card-link:hover .content__video-card-title,
+.content__card-link:hover .content__video-card-description {
+  text-decoration: underline;
+}
+
+.content__card-link:active .content__video-card-description-container {
+  background-color: #545050;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
 }
